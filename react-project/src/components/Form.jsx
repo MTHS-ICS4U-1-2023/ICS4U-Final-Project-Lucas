@@ -1,7 +1,10 @@
-export default function Form {
+import { useState } from "react";
+export default function Form({ todos, setTodos}) {
+    const [todo, setTodo] = useState("");
+
     function handleSubmit(e) {
         e.preventDefault();
-        setTodosList([...todos, todo])
+        setTodos([...todos, todo])
         setTodo("")
     }
     return (
