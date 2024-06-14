@@ -4,10 +4,14 @@ export default function TodoItem({ item, todos, setTodos }) {
         console.log("Delete button clicked for item", item);
         setTodos(todos.filter((todo)=> todo !== item));
     }
+    function handleClick(name) {
+        console.log("Item text clicked", name);
+    }
     return (
         <div className={styles.item}>
             <div className={styles.itemName}> 
-                {item.name} 
+                <span onClick = {() => handleClick(item.name)}> {item.name} </span>
+
                 <span>
                     <button 
                         onClick={() => handleDelete(item)} 
