@@ -7,6 +7,7 @@
 .itemName {
     font-weight: bold;
     padding: 20px;
+    cursor: pointer;
 }
 .line {
     border: 1px solid #f4f4f4;
@@ -20,4 +21,8 @@
     margin-top: -5px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.completed {
+    text-decoration: line-through;
 }
